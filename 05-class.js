@@ -65,6 +65,59 @@ let fight = (x) => {
 	}, 20000)
 }
 
-fight(mimmo)
+// fight(mimmo)
 
 // console.log('020503', );
+
+
+
+// 020504
+
+let names1 = ['apples', 'bananas', 'bread', 'cookies', 'broccoli', 'onions']
+let prices = [20, 12, 24, 53, 32, 15]
+let discounts = [0, 0, 10, 25, 0, 5]
+
+class Product {
+	constructor (name,price) {
+		this.name=name
+		this.price=price
+	}
+	applyDiscount (discount) {
+		this.price = this.price - (this.price*discount/100)
+
+	}
+}
+
+let pere = new Product ('Pere',10)
+pere.applyDiscount(10)
+console.log(pere)
+
+//
+
+class Reciept {
+	constructor (products) {
+		this.products = products
+		this.total = 0
+	}
+	calcTotal () {
+		this.total = this.products.map(p => p.price).reduce((t,i)=> {
+			return t + i
+		})
+	}
+}
+let getReciept = (names,prices,discounts) => {
+	let products = names.map((n, i) => {
+		return new Product (n,prices[i])
+	})
+	console.log(products);
+	products.map ((p ,i) => p.applyDiscount(discounts[i]))
+	console.log('============');
+	console.log(products);
+	let newreciept = new Reciept (products)
+	console.log(newreciept);
+	newreciept.calcTotal()
+	console.log(newreciept);
+}
+
+
+getReciept(names1,prices,discounts)
