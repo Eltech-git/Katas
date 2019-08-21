@@ -1,0 +1,7 @@
+let showFull = (num) => {
+	let num1 = Number(num)
+	 return num1.toFixed()
+ }
+
+console.log(showFull(3.14));
+console.log(showFull(1.5678));
