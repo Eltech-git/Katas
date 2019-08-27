@@ -1,0 +1,38 @@
+.maintitle {
+	color: rgb(129, 42, 32);
+
+}
+.background {
+	position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  border:0;
+	box-shadow: 3px 5px;
+}
+.wrap {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap:30px;
+
+}
+.prodImg {
+	width: 150px;
+	border-width :50px;
+	border-color: rgb(63, 215, 52);
+	border-radius: 50%;
+}
+
+.sellingBox {
+	display: grid
+
+}
+
+/* 040401 */
+
+div {
+	dfdfg:trtr;
+	fghf
+}
+
+/* uhbuh */

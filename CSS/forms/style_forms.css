@@ -1,0 +1,63 @@
+.background {
+	font-family:'Lato', sans-serif;
+	padding:600px;
+	height : 50%;
+	width: 50%;
+	background-image: url('https://images.unsplash.com/photo-1545547465-438cf38e0437?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80');
+	background-size: cover;
+	background-position: center;
+	position:relative;
+}
+.whitebox {
+	width:300px;
+	height:350px;
+	border-radius: 8px;
+	background-color: white;
+	border-style: solid;
+	border-width: thin;
+	border-color:white;
+	display:grid;
+	grid-template-rows: 2fr 4fr;
+	position:absolute;
+	padding: 10px;
+}
+.airbnblogo {
+	height: 30px;
+	width: 80px;
+	margin-left: 80px;
+	margin-top:20px;
+	background-image: url('https://www.stickpng.com/assets/images/580b57fcd9996e24bc43c513.png');
+	background-position: center;
+	background-size: contain;
+	padding :15px;
+	background-repeat: no-repeat;
+}
+input {
+	transition:border 1s;
+	width:100%;
+	height:30px
+}
+label {
+
+	font-size: 15px;
+	color: darkgrey;
+}
+input:hover {
+	border-color: green
+}
+button {
+	font-size: 15px;
+	transition;
+	height:50px;
+	width:75px;
+	border-radius:8px;
+	border-style: solid;
+	border-width: thin;
+	color: white;
+	background-color: #00988f
+}
+
+p {
+	font-size: 13px;
+	color : #4f4f4f
+}

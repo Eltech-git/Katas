@@ -1,0 +1,58 @@
+/* 040501 */
+/* .beach {
+	background-image: url('beach.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	width:100vh;
+	height:100vh;
+	box-shadow: 1px 5px 20px rgba(255,0,0,.5);
+
+} */
+/* 040502 */
+/* .backgound {
+	;
+	display:grid;
+	background-position:left;
+	background-repeat:repeat ;
+	background-image: url('https://github.com/tortugacoders/k-04-css/blob/master/images/tropical.jpg?raw=true');
+	background-size: 10%;
+	width:100vh;
+	height:100vh;
+} */
+/* 040503
+.backgound {
+	background-color: red;
+	opacity:0.5;
+	width:100vh;
+	height:100vh;
+} */
+/*
+.landscape {
+	width:600px;
+	height:100px;
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	background-position: center;
+	background-image: url('https://github.com/tortugacoders/k-04-css/blob/master/images/forest.jpg?raw=true');
+
+}
+040504
+.square {
+	width:500px;
+	height:500px;
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	background-position: center;
+	background-image: url('https://github.com/tortugacoders/k-04-css/blob/master/images/forest.jpg?raw=true');
+}
+.portrait {
+width:100px;
+height:500px;
+background-repeat: no-repeat;
+
+background-size: cover;
+background-position: center;
+background-image: url('https://github.com/tortugacoders/k-04-css/blob/master/images/forest.jpg?raw=true');
+} */

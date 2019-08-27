@@ -1,0 +1,64 @@
+
+/* 040801 */
+/* h1 {
+	font-style: Impact;
+}
+small {
+	font-family: arial
+
+}
+p {
+	font-family: Times;
+} */
+/* 040802 */
+div {
+	border-color : black;
+	border-style: solid;
+	padding:10px;
+	border width: 0.5px;
+	width: 450px;
+	height: 300px;
+}
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+}
+small {
+	color: darkgrey;
+	font-family: 'Open Sans', sans-serif;
+
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+	a {
+		color:tomato;
+		font-family: 'Lato',sans-serif;
+	}
+
+/* 040803 */
+/* 
+div {
+	border-color : black;
+	border-style: solid;
+	padding:10px;
+	border width: 0.5px;
+	width: 450px;
+	height: 300px;
+}
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+}
+small {
+	color: darkgrey;
+	font-family: 'Open Sans', sans-serif;
+
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+	a {
+		color:tomato;
+		font-family: 'Lato',sans-serif;
+	} */

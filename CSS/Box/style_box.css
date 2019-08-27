@@ -1,0 +1,111 @@
+/* 040601 */
+/* div {
+	border-style: solid;
+	border-left-color: blue;
+	border-right-color:blue;
+	border-top-color :red;
+	border-bottom-color:red;
+	text-align:center;
+	width: 100px;
+	height:100px;
+	padding:30px
+} */
+/* 040602 */
+/* 120px */
+/* 040603 */
+/* 106px */
+/* 040604 */
+/* div {
+	position:fixed;
+  padding: 10px;
+  width: 40px;
+} */
+/* 040605 */
+/* div {
+	width:100px;
+	height:100px;
+	padding: 10px;
+	border-color: tomato;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+} */
+/* 040506 */
+/* div {
+	width:100px;
+	background-color: tomato;
+	height:100px;
+	padding: 10px;
+	border-color: tomato;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+} */
+/* 040507 */
+/* .wrap {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+	width:100px;
+	background-color: tomato;
+	height:100px;
+	padding: 15px;
+	border-color: tomato;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+
+}
+.elem {
+	width:15px;
+	background-color: white;
+	height:75px;
+	padding: 10px;
+	border-color: white;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+} */
+
+/* 040508 */
+/* 
+.wrap {
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	width:100px;
+	background-color: tomato;
+	height:100px;
+	padding: 15px;
+	border-color: tomato;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:8px;
+	border-top-right-radius:8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+
+}
+.elem {
+	width:35px;
+	background-color: white;
+	height:35px;
+	border-color: white;
+  border-style: solid;
+	border width:1px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px; */

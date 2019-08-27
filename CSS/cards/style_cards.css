@@ -1,0 +1,49 @@
+.bigbox {
+	transition: box-shadow: 0px 0px 0px darkgrey 2s;
+	display:grid;
+	cursor: pointer;
+	grid-template-rows: 10fr 1fr 1fr 1fr 1fr;
+	margin-left:40px;
+	margin-top: 40px;
+	width:350px;
+	height:400px;
+	border-style: solid;
+	border-width: thin;
+	border-color:darkgrey;
+	border-radius:8px;
+	padding:10px;
+	font-family: arial
+}
+.bigbox:hover {
+	box-shadow: 10px 10px 10px darkgrey ;
+
+
+}
+.picture{
+	/* here i have defeated the padding with negative margin */
+	margin-left: -10px;
+	margin-top:-10px;
+	width:106%;
+	height:100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-top-left-radius: 8px;
+	border-top-right-radius:8px;
+	background-image: url('https://q-ak.bstatic.com/images/hotel/max1024x768/186/186223203.jpg');
+
+}
+}
+h3 {
+	color: darkgrey;
+	font-size:15px;
+}
+
+
+
+h1 {
+	font-size: 30px;
+}
+small {
+	color:darkgrey
+}
