@@ -1,7 +1,6 @@
 
-let getarray = () => {
-	return document.getElementsByClassName('on').classList.add('off')
-}
+let getarray = Array.from(document.getElementsByClassName('on'))
+console.log(getarray);
 
 
 
