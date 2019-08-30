@@ -1,28 +1,25 @@
 import React from 'react';
 import Favorites from './Favorites'
 import '../Styles/places.css'
+import Thumbnail from './Thumbnail'
+
 
 class Places extends React.Component {
 	state = {
 		places : [
-			{title:'Romania',price:0,location:'Samarcanda'},
-			{title:'Pizda',price:0,location:'Beirut'},
-			{title:'Pula',price:0,location:'Rutto'},
-			{title:'Cur',price:0,location:'Collina'},
+			{title:'Villa May',price:500,location:'Samarcanda'},
+			{title:'Reidence Pula',price:450,location:'Beirut'},
+			{title:'Condomino Rollo',price:1000,location:'Miami'},
+			{title:'Villa June',price:350,location:'San Francisco'},
 		]
-
 	}
 	render() {
 		return (
 			<div className = 'page'>
 				<h1>{this.state.places.length} places</h1>
 				<div className = 'thumbnails'>
-						{ this.state.places.map( p =>
-							<div className = 'thumbnail'>
-								<h1>Title: {p.title}</h1>
-								<h3>price: {p.price}</h3>
-								<p>Location: {p.location}</p>
-							</div>)
+						{ this.state.places.map( (p,i)=>
+							< Thumbnail place={p} key={i} a='This is the place you would Love' />)
 						}
 				</div>
 				<Favorites />
@@ -31,6 +28,4 @@ class Places extends React.Component {
 		)
 	}
 }
-
-
 export default Places;
