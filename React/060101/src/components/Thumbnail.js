@@ -1,11 +1,12 @@
 import React from 'react';
-
+import '../Styles/thumbnails.css'
 
 
 class Thumbnail extends React.Component {
 		state = {
 			place: this.props.place,
-			a:this.props.a
+			a:this.props.a,
+			liked:false
 		}
 		changeTitle= () => {
 			let place = this.state.place
@@ -15,14 +16,26 @@ class Thumbnail extends React.Component {
 				place:place
 			})
 		}
+		changeLiked= () => {
+			let liked = this.state.liked
+			liked == false ? liked=true : liked=false
+			this.setState({
+				liked:liked
+			})
+		}
+		addClassLiked= () => this.state.liked? 'liked thumbnail':'thumbnail'
 		render() {
 			return (
-				<div className = 'thumbnail'>
+				<div className ={this.addClassLiked()}>
 					<span>{this.state.a}</span>
-					<h1>Title : {this.state.place.title}</h1>
+					<h1>{this.state.place.title}</h1>
 					<h3>price: {this.state.place.price} € / per month</h3>
 					<p>Location: {this.state.place.location}</p>
-					<button onClick= {this.changeTitle}>Compra</button>
+					<button onClick= {this.changeLiked}>Like</button>
+					{console.log(this.state.liked)};
+					<label>Like
+					<input type = 'checkbox' cheked = 'uncheked'></input>
+					</label>
 				</div>
 			)
 		}

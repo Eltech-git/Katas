@@ -6,6 +6,7 @@ class Favorites extends React.Component {
 	render() {
 		return (
 			<div className = 'favorites'>
+
 				FUNZIONA DIO
 				SALAMANDRA
 			</div>

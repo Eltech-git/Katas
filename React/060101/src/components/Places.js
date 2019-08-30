@@ -8,7 +8,7 @@ class Places extends React.Component {
 	state = {
 		places : [
 			{title:'Villa May',price:500,location:'Samarcanda'},
-			{title:'Reidence Pula',price:450,location:'Beirut'},
+			{title:'Residence Pula',price:450,location:'Beirut'},
 			{title:'Condomino Rollo',price:1000,location:'Miami'},
 			{title:'Villa June',price:350,location:'San Francisco'},
 		]
@@ -19,7 +19,7 @@ class Places extends React.Component {
 				<h1>{this.state.places.length} places</h1>
 				<div className = 'thumbnails'>
 						{ this.state.places.map( (p,i)=>
-							< Thumbnail place={p} key={i} a='This is the place you would Love' />)
+							< Thumbnail place={p} key={i} a='This is the place you will Love' />)
 						}
 				</div>
 				<Favorites />
