@@ -2,6 +2,7 @@ import React from 'react';
 import Favorites from './Favorites'
 import '../Styles/places.css'
 import Thumbnail from './Thumbnail'
+import Search from './Search'
 
 
 class Places extends React.Component {
@@ -38,7 +39,10 @@ class Places extends React.Component {
 							<Thumbnail place={p} key={i} a='This is the place you will Love' changeLiked={this.changeLiked} />)
 						}
 				</div>
+				<Search />
 				<Favorites places={this.state.places} changeLiked={this.changeLiked}/>
+
+
 			</div>
 
 		)

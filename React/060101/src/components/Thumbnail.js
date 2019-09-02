@@ -5,13 +5,13 @@ import '../Styles/thumbnails.css'
 class Thumbnail extends React.Component {
 		// changeTitle= () => {
 		// 	let place = this.state.place
-		// 	place.title = 'Col cazzo SEI POVERO!!!';
-		// 	place.price = 'e ti puzzano i piedi di negro'
+		// 	place.title = 'NO!!!';
+		// 	place.price = 'ecco'
 		// 	this.setState({
 		// 		place:place
 		// 	})
 		// }
-		
+
 		changeLiked = () => {
 			this.props.changeLiked(this.props.place)
 		}
