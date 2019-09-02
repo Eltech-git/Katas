@@ -1,16 +1,16 @@
 import React from 'react';
-import '../Styles/favorites.css'
+import '../Styles/favorites.css';
+import Thumbnail from './Thumbnail';
+import Places from './Places';
 
 class Favorites extends React.Component {
-	state = {}
 	render() {
 		return (
 			<div className = 'favorites'>
-
-				FUNZIONA DIO
-				SALAMANDRA
+			{ this.props.places.filter(p => p.liked).map(p =>
+			<Thumbnail changeLiked={this.props.changeLiked} place={p}/>)
+			}
 			</div>
-
 		)
 	}
 }
