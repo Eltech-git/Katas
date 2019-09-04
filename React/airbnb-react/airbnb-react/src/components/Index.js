@@ -128,25 +128,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <nav>
-          <a
-            href="index.html"
-            className="logo"
-            style={{ backgroundImage: 'url("/logo-airbnb.png")' }}
-          />
-          <div className="profile">
-            <a href="profile.html" className="button">
-              <div
-                className="avatar"
-                style={{
-                  backgroundImage:
-                    'url("https://randomuser.me/api/portraits/men/9.jpg")'
-                }}
-              />
-              <span>Tony</span>
-            </a>
-          </div>
-        </nav>
+        <Nav />
         <div className="filters">
           <select>
             <option value={1}>Rooms: 1</option>
