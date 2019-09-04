@@ -1,12 +1,14 @@
 let add = array => {
-  return array.reduce((a, b) => a + b);
+  let price = array.map(a => a.price);
+  return price.reduce((a, b) => a + b);
 };
+
 let subtract = array => {
-  return array.reduce((a, b) => a + b);
+  let price = array.map(a => a.price);
+  return price.reduce((a, b) => a - b);
 };
 
 module.exports = {
   add: add,
-  substract: substract
+  subtract: subtract
 };
-console.log(add(pippo));
