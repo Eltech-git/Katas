@@ -11,7 +11,7 @@ import Confirm from "./Confirm";
 import Create from "./Create";
 import Favorites from "./Favorites";
 import Host from "./Host";
-import Index from "./Index";
+import Places from "./Places";
 import Login from "./Login";
 import Profile from "./Profile";
 import Signup from "./Signup";
@@ -35,16 +35,16 @@ class Router extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/bookingpage" component={BookingsPage} />
+          <Route path="/bookingsPage" component={BookingsPage} />
           <Route path="/Confirm" component={Confirm} />
           <Route path="/Create" component={Create} />
           <Route path="/Favorites" component={Favorites} />
           <Route path="/Host" component={Host} />
           <Route path="/Login" component={Login} />
-          <Route path="/Place" component={Place} />
+          <Route path="/Place/:_id" component={Place} />
           <Route path="/Profile" component={Profile} />
           <Route path="/Signup" component={Signup} />
-          <Route path="/" component={Index} />
+          <Route path="/" component={Places} />
         </Switch>
       </BrowserRouter>
     );

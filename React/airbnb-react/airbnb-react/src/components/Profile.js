@@ -41,15 +41,18 @@ class Profile extends React.Component {
               <form>
                 <div className="group">
                   <label>Name</label>
-                  <input type="text" defaultValue="Tony" />
+                  <input type="text" defaultValue="Emiliano" />
                 </div>
                 <div className="group">
                   <label>Email</label>
-                  <input type="email" defaultValue="tony@tortugacoders.com" />
+                  <input
+                    type="email"
+                    defaultValue="emilianolombarditech@gmail.com"
+                  />
                 </div>
                 <div className="group">
                   <label>Location</label>
-                  <input type="text" defaultValue="Thailand" />
+                  <input type="text" defaultValue="Italy" />
                 </div>
                 <div className="group">
                   <label>Profile Picture</label>
@@ -57,8 +60,7 @@ class Profile extends React.Component {
                     <div
                       className="avatar"
                       style={{
-                        backgroundImage:
-                          'url("https://randomuser.me/api/portraits/men/9.jpg")'
+                        backgroundImage: 'url("")'
                       }}
                     />
                     <div className="name">

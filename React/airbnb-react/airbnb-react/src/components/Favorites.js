@@ -18,16 +18,7 @@ import "../styles/users.css";
 
 class Favorites extends React.Component {
   state = {
-    bookings: [
-      {
-        picUrl:
-          'url("https://q-ak.bstatic.com/images/hotel/max1024x768/186/186223203.jpg")',
-        type: "Entire villa",
-        roomNum: "5",
-        title: "Santiago Surabaja Romina Peròn",
-        priceXN: 350
-      }
-    ]
+    places: this.props.p
   };
   render() {
     return (
@@ -39,7 +30,7 @@ class Favorites extends React.Component {
             <div className="content">
               <h2>My Favorites</h2>
               <div className="grid two">
-                {this.state.bookings.map(p => {
+                {this.state.places.map(p => {
                   return <Thumbnail p={p} />;
                 })}
               </div>

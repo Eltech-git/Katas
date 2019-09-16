@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import axios from "axios";
 import "../styles/buttons.css";
 import "../styles/cards.css";
 import "../styles/filters.css";
@@ -15,7 +16,29 @@ import "../styles/users.css";
 
 class Gallery extends React.Component {
   state = {
-    pic: this.props.p
+    images: [],
+    bigImage: this.props.images[0],
+    index: 0
+  };
+  componentWillMount() {
+    let images = this.props.images;
+    console.log(this.props.images);
+    this.setState({
+      images: images
+    });
+    let bigImage = this.props.images;
+    console.log(this.props.images[1]);
+    this.setState({
+      bigImage: bigImage
+    });
+  }
+  //con questa funzione dico che quando clicca deve cambiare lindice della foto nell array da mostrare nell immagine grande
+  changeMainImage = i => {
+    console.log(i);
+    let index = i;
+    this.setState({
+      index: index
+    });
   };
 
   render() {
@@ -24,72 +47,22 @@ class Gallery extends React.Component {
         <div
           className="image-main"
           style={{
-            backgroundImage:
-              'url("https://q-ak.bstatic.com/images/hotel/max1024x768/186/186223203.jpg")'
+            backgroundImage: `url(${this.props.images[this.state.index]})`
           }}
         >
           <button className="icon">
             <i className="far fa-heart" />
           </button>
         </div>
+
         <div className="thumbnails">
-          <div
-            className="thumbnail selected"
-            style={{ backgroundImage: this.state.pic }}
-          />
-          <div
-            className="thumbnail"
-            style={{ backgroundImage: this.state.pic }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://r-ak.bstatic.com/images/hotel/max1280x900/186/186223174.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://r-ak.bstatic.com/images/hotel/max1280x900/186/186223178.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://q-ak.bstatic.com/images/hotel/max1280x900/186/186223180.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://q-ak.bstatic.com/images/hotel/max1280x900/186/186223186.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://r-ak.bstatic.com/images/hotel/max1280x900/186/186223190.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://q-ak.bstatic.com/images/hotel/max1280x900/186/186223195.jpg")'
-            }}
-          />
-          <div
-            className="thumbnail"
-            style={{
-              backgroundImage:
-                'url("https://q-ak.bstatic.com/images/hotel/max1280x900/186/186223199.jpg")'
-            }}
-          />
+          {this.props.images.map((image, i) => (
+            <div
+              className="thumbnail"
+              onClick={() => this.changeMainImage(i)}
+              style={{ backgroundImage: `url(${image})` }}
+            ></div>
+          ))}
         </div>
       </div>
     );

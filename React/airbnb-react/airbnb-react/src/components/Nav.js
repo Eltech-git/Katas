@@ -1,9 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "../styles/sidebar.css";
-import "../styles/grid.css";
-import "../styles/nav.css";
 import "../styles/buttons.css";
+import "../styles/cards.css";
+import "../styles/filters.css";
+import "../styles/forms.css";
+import "../styles/gallery.css";
+import "../styles/global.css";
+import "../styles/grid.css";
+import "../styles/icons.css";
+import "../styles/nav.css";
+import "../styles/reviews.css";
+import "../styles/sidebar.css";
+import "../styles/users.css";
 
 class Nav extends React.Component {
   state = {
@@ -17,20 +26,19 @@ class Nav extends React.Component {
   render() {
     return (
       <nav>
-        <a
-          Link
-          to="index.html"
+        <Link
+          to="/places"
           className="logo"
           style={{ backgroundImage: this.state.navData.logo }}
-        />
+        ></Link>
         <div className="profile">
-          <a href="profile.html" className="button">
-            <div
+          <Link to="/Profile" className="button">
+            <span
               className="avatar"
               style={{ backgroundImage: this.state.navData.picture }}
             />
             <span>{this.state.navData.name}</span>
-          </a>
+          </Link>
         </div>
       </nav>
     );

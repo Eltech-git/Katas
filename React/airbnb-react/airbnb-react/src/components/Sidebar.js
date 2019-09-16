@@ -1,36 +1,39 @@
-import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import '../styles/sidebar.css'
-import '../styles/grid.css'
-
-
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "../styles/sidebar.css";
+import "../styles/grid.css";
 
 class Sidebar extends React.Component {
-	state = {
-	}
+  state = {
+    active: false
+  };
 
-	render() {
-		return (
-		<div class="grid sidebar-left">
-			<div class="sidebar">
-					<ul>
-						<li class="">
-							<a href="profile.html">Profile</a>
-						</li>
-						<li class="active">
-							<a href="bookings.html">Bookings</a>
-						</li>
-						<li class="">
-							<a href="favorites.html">Favorites</a>
-						</li>
-						<li class="">
-							<a href="host.html">Host</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-				)
-	}
+  toggleBox = () => {
+    this.setState(prevState => ({ active: !prevState.active }));
+  };
+
+  render() {
+    return (
+      <div className="grid sidebar-left">
+        <div className="sidebar">
+          <ul>
+            <li className="">
+              <Link to="/Profile">Profile</Link>
+            </li>
+            <li className="active">
+              <Link to="/BookingsPage">Bookings</Link>
+            </li>
+            <li className="" onClick={this.toggleBox}>
+              <Link to="/Favorites">Favorites</Link>
+            </li>
+            <li className="">
+              <Link to="/Host">Host</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    );
+  }
 }
 export default Sidebar;

@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Nav from "./Nav";
 import Sidebar from "./Sidebar";
 import Thumbnail from "./Thumbnail";
+import axios from "axios";
+require("dotenv").config();
 import "../styles/buttons.css";
 import "../styles/cards.css";
 import "../styles/filters.css";
@@ -18,33 +20,18 @@ import "../styles/users.css";
 
 class BookingsPage extends React.Component {
   state = {
-    bookings: [
-      {
-        picUrl:
-          'url("https://afar-production.imgix.net/uploads/images/afar_post_headers/images/s6P1cWj2kE/original_hawaii_202019.jpg")',
-        type: "Squadra da paura",
-        roomNum: "50",
-        title: "A.S.",
-        priceXN: 350
-      },
-      {
-        picUrl:
-          'url("https://www.viaggi-usa.it/wp-content/uploads/2017/07/copertina.jpg")',
-        type: "Squadra da paura222",
-        roomNum: "50222",
-        title: "A.S.222",
-        priceXN: 350
-      },
-      {
-        picUrl:
-          'url("https://cdn.marcopolo.tv/960x480/media/post/valqhg5/quando-andare-alle-hawaii.jpg")',
-        type: "Squadra da paura222",
-        roomNum: "50222",
-        title: "A.S.222",
-        priceXN: 350
-      }
-    ]
+    places: []
   };
+
+  componentWillMount() {
+    axios.get(`${process.env.APIURL}/places`).then(res => {
+      this.setState({
+        places: res.data,
+        originalPlaces: res.data
+      });
+    });
+  }
+
   render() {
     return (
       <div>
@@ -57,16 +44,16 @@ class BookingsPage extends React.Component {
               <div className="grid two"></div>
               <h2>Past Trips</h2>
               <div className="grid two">
-                {this.state.bookings.map(p => {
+                {this.state.places.map(p => {
                   return <Thumbnail p={p} />;
                 })}
               </div>
               <table>
-                {this.state.bookings.map(b => {
+                {this.state.places.map(b => {
                   return (
                     <tr>
                       <td>{b.title}</td>
-                      <td>{b.priceXN}</td>
+                      <td>{b.price}</td>
                     </tr>
                   );
                 })}

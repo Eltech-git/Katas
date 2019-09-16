@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import Sidebar from "./Sidebar";
 import Thumbnail from "./Thumbnail";
@@ -53,9 +54,9 @@ class Host extends React.Component {
           <div className="grid sidebar-left">
             <Sidebar />
             <div className="content">
-              <a className="button primary" href="create.html">
+              <Link to="create" className="button primary">
                 Host new place
-              </a>
+              </Link>
               <hr />
               <h2>Places I'm hosting</h2>
               <div className="grid two">

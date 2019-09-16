@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "../styles/sidebar.css";
+import { Link } from "react-router-dom";
 import "../styles/grid.css";
 
 class Thumbnail extends React.Component {
@@ -8,16 +9,14 @@ class Thumbnail extends React.Component {
     card: this.props.p
   };
 
-  componentWillMount() {
-    console.log(this.props);
-  }
-
   render() {
     return (
-      <a className="card link" href="place.html">
+      <Link to={`/Place/${this.state.card._id}`} className="card link">
         <div
           className="image"
-          style={{ backgroundImage: this.state.card.picUrl }}
+          style={{
+            backgroundImage: `url(${this.state.card.images[0]})`
+          }}
         >
           <button className="icon">
             <i className="far fa-heart" />
@@ -25,10 +24,10 @@ class Thumbnail extends React.Component {
         </div>
         <div className="content">
           <small className="meta">
-            {this.state.card.type} • {this.state.card.roomNum} Rooms
+            {this.state.card.type.name} • {this.state.card.bedrooms} Rooms
           </small>
           <h2>{this.state.card.title}</h2>
-          <span className="price">${this.state.card.priceXN}/night</span>
+          <span className="price">${this.state.card.price}/night</span>
           <span className="rating">
             <i className="fas fa-star" />
             <i className="fas fa-star" />
@@ -38,7 +37,7 @@ class Thumbnail extends React.Component {
             <span>37 Reviews</span>
           </span>
         </div>
-      </a>
+      </Link>
     );
   }
 }
